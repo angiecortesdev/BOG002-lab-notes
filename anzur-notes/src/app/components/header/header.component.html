@@ -1,0 +1,35 @@
+<header class="header">
+  <div class="container">
+      <nav class="menu">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <div class="logo">AnZur<span>Notes</span></div>
+          <!-- en lugar de href se coloca routerLink y el nombre de la ruta -->
+          <ul *ngIf="user$ | async as user; else login">
+            <li *ngIf="user"><a class="logout" (click)="onLogout()">Logout</a></li>
+            <li><a>{{ user?.email }}</a></li>
+          </ul>
+          <ng-template #login>
+            <ul>
+              <li><a routerLink="/login">Login</a></li>
+              <li><a routerLink="/register">Registro</a></li>
+            </ul>
+          </ng-template>
+      </nav>
+  </div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+

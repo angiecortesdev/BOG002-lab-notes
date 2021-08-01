@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "anzurnotes": {
+      "hosting": {
+        "anzur-notes": [
+          "anzurnotes"
+        ]
+      }
+    }
+  }
+}

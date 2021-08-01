@@ -1,0 +1,26 @@
+<img src="../../assets/wave.png" alt="imagen de la ola svg" class="wave">
+  <div class="container">
+      <div class="img">
+          <img src="../../assets/notes.svg" alt="image cellphone" class="cellphone">
+      </div>
+      <div class="register-container">
+           <form id="form"  [formGroup]="loginForm" (ngSubmit)="onLogin()">
+              <img class="avatar" src="../../assets/avatar.svg" alt="image user">
+              <div class="form">
+                  <h4>LOGIN</h4>
+                  <div class="group">
+                      <input type="email" required formControlName="email"><span class="bar"></span>
+                      <label for="email">Email</label>
+                  </div>
+                  <div class="group">
+                      <input type="password" required formControlName="password"><span class="bar"></span>
+                      <label>Password</label>
+                  </div>
+              </div>
+              <a routerLink="/register">You do not have an account? register</a>
+              <input type="submit" value="Login" class="btn" />
+              <input type="submit" value="Login whit Google" class="btn-google" />
+              <input type="submit" value="Login whit Facebook" class="btn-facebook" />
+          </form>
+      </div>
+</div>

@@ -1,0 +1,11 @@
+
+<div>
+  <form [formGroup]="createNote" (ngSubmit)="addNote()">
+    <h3>{{ text }}</h3>
+    <span *ngIf="submitted && createNote.invalid">Todos los Campos son Obligatorios</span>
+    <input type="text" placeholder="Title" formControlName="title">
+    <textarea name="message" placeholder="Note" formControlName="note"></textarea>
+    <button routerLink="/list">Back</button>
+    <button class="button">Create</button>
+  </form>
+</div>
