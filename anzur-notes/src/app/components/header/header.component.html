@@ -5,7 +5,7 @@
         <label for="check" class="checkbtn">
           <i class="fas fa-bars"></i>
         </label>
-        <div class="logo">AnZurNotes</div>
+        <div class="logo"><a routerLink="/register">AnZurNotes</a></div>
           <!-- en lugar de href se coloca routerLink y el nombre de la ruta -->
           <ul *ngIf="user$ | async as user; else login">
             <li *ngIf="user"><a class="logout" (click)="onLogout()">Logout</a></li>
@@ -14,7 +14,7 @@
           <ng-template #login>
             <ul>
               <li><a routerLink="/login">Login</a></li>
-              <li><a routerLink="/register">Registro</a></li>
+              <li><a routerLink="/register">Register</a></li>
             </ul>
           </ng-template>
       </nav>

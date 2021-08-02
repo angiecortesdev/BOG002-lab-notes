@@ -4,18 +4,18 @@ import { LoginComponent } from './components/login/login.component';
 import { ListNotesComponent } from './components/list-notes/list-notes.component';
 import { CreateNotesComponent } from './components/create-notes/create-notes.component';
 import { RegisterComponent } from './components/register/register.component';
+//import { RegisterModule } from './components/register/register.module';
 
 const routes: Routes = [
-  { path: '', redirectTo:'register', pathMatch: 'full'},
+  { path: '', redirectTo:'login', pathMatch: 'full'},
+  { path: 'login', component: LoginComponent },
+  //{ path: 'register', component: RegisterComponent},
+  { path: 'login', loadChildren: () => import('./components/login/login.module').then(m => m.LoginModule)},
+  { path: 'register', loadChildren: () => import('./components/register/register.module').then(m => m.RegisterModule)},
   { path: 'list', component: ListNotesComponent },
   { path: 'create', component: CreateNotesComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent},
   { path: 'edit/:id', component: CreateNotesComponent },
-  { path: 'login', loadChildren: () => import('./components/login/login.module').then(m => m.LoginModule) },
-
-  { path: 'register', loadChildren: () => import('./components/register/register.module').then(m => m.RegisterModule) },
-  { path: '**', redirectTo:'register' }
+  { path: '**', redirectTo:'login' }
 ];
 CreateNotesComponent
 @NgModule({

@@ -1,21 +1,35 @@
+.background{
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(97,186,255,1) 0%, rgba(166,239,253,1) 90.1% );
+  height: 84.8vh;
+}
+
 form{
   width: 450px;
   margin: auto;
-  background: #3282b8;
+  background: #fff;
   padding: 10px 20px;
   box-sizing: border-box;
-  margin-top: 20px;
+  margin-top: 80px;
   border-radius: 20px;
   font-family: 'Poppins', sans-serif;
+  box-shadow: 6px 10px 27px -3px rgba(0,0,0,0.75);
+-webkit-box-shadow: 6px 10px 27px -3px rgba(0,0,0,0.75);
+-moz-box-shadow: 6px 10px 27px -3px rgba(0,0,0,0.75);
 }
 
 h3{
-  color: #fff;
+  color: rgb(209, 209, 209);
   text-align: center;
   margin: 0;
+  margin-top: 30px;
   font-size: 30px;
   margin-bottom: 20px;
   font-family: 'Poppins', sans-serif;
+}
+
+.title{
+  border-bottom: 1px solid rgb(223, 223, 223);
+  outline: none;
 }
 
 input, textarea{
@@ -28,26 +42,198 @@ input, textarea{
 }
 
 textarea{
-  background: #000;
+  background: transparent;
   min-height: 150px;
   max-height: 150px;
   max-width: 100%;
   min-width: 100%;
-  color: #fff;
+  color: rgb(133, 122, 122);
+  outline: none;
 }
 
-.button{
+/* .button{
   background-color: #31384A;
   color: #ffff;
   padding: 10px;
   font-family: 'Poppins', sans-serif;
   border-radius: 10px;
+
+} */
+
+.btn-neon:hover, .btn-neon2:hover{
+  cursor: pointer;
+  color: white;
+}
+
+
+.btn-neon{
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: rgb(7, 3, 3);
+  letter-spacing: 1px;
+  font-size: 20px;
+  text-decoration: none;
+  overflow: hidden;
+  transition: 0.2s;
+  border-radius: 10px;
+}
+
+.btn-neon:hover{
+  background: #14faff;
+  box-shadow: 0 0 10px #14faff, 0 0 40px #14faff, 0 0 80px #14faff;
+  transition-delay: 0.8s;
+}
+
+.btn-neon span{
+  position: absolute;
+  display: block;
+}
+
+#span1{
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #14faff);
+}
+
+.btn-neon:hover #span1{
+  left: 100%;
+  transition: 1s;
+}
+
+#span3{
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg,transparent,#14faff);
+}
+
+.btn-neon:hover #span3{
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+#span2{
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #14faff);
+}
+
+.btn-neon:hover #span2{
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+
+#span4{
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #14faff);
+}
+
+.btn-neon:hover #span4{
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
+
+/* BOTON DE CREAR */
+
+
+
+.btn-neon2{
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  /* color: white; */
+  letter-spacing: 1px;
+  font-size: 20px;
+  text-decoration: none;
+  overflow: hidden;
+  transition: 0.2s;
+  border-radius: 10px;
+  margin-top: -130px;
+  margin-bottom: 18px;
   margin-left: 250px;
 }
 
-.button:hover{
-  cursor: pointer;
+.btn-neon2:hover{
+  background: #14faff;
+  box-shadow: 0 0 10px #14faff, 0 0 40px #14faff, 0 0 80px #14faff;
+  transition-delay: 0.8s;
 }
+
+.btn-neon2 span{
+  position: absolute;
+  display: block;
+}
+
+#span1{
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #14faff);
+}
+
+.btn-neon2:hover #span1{
+  left: 100%;
+  transition: 1s;
+}
+
+#span3{
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg,transparent,#14faff);
+}
+
+.btn-neon2:hover #span3{
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+#span2{
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #14faff);
+}
+
+.btn-neon2:hover #span2{
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+
+#span4{
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #14faff);
+}
+
+.btn-neon2:hover #span4{
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
+
+
 
 @media (max-width:480px){
   form{
