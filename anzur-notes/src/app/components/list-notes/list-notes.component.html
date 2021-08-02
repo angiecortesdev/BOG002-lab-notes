@@ -15,12 +15,11 @@
 
   <table class="datatable" *ngIf="notes.length > 0">
     <thead>
-      <th>
-        <tr>Title</tr>
-        <tr>Description</tr>
-        <tr>Date</tr>
-        <tr>Actions</tr>
-      </th>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Actions</th>
+      </tr>
     </thead>
     <tbody>
       <tr *ngFor='let note of notes'>

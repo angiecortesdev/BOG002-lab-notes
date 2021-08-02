@@ -21,7 +21,7 @@ export class CreateNotesComponent implements OnInit {
               private toastr: ToastrService,
               private aRoute: ActivatedRoute) {
     this.createNote = this.fb.group({
-      title: [null, [Validators.required, Validators.maxLength(15)]],
+      title: [null, [Validators.required]],
       note: [null, [Validators.required]]
     })
     this.id = this.aRoute.snapshot.paramMap.get('id');
@@ -37,7 +37,7 @@ export class CreateNotesComponent implements OnInit {
       return;
     }
     if(this.id === null){
-      this.add();
+      this.addNote();
     }else{
       this.editNote(this.id)
     }

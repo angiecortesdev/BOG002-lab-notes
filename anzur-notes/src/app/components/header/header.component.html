@@ -5,7 +5,7 @@
         <label for="check" class="checkbtn">
           <i class="fas fa-bars"></i>
         </label>
-        <div class="logo">AnZur<span>Notes</span></div>
+        <div class="logo">AnZurNotes</div>
           <!-- en lugar de href se coloca routerLink y el nombre de la ruta -->
           <ul *ngIf="user$ | async as user; else login">
             <li *ngIf="user"><a class="logout" (click)="onLogout()">Logout</a></li>

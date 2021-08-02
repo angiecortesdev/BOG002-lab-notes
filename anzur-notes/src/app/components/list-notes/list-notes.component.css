@@ -1,5 +1,142 @@
-:root{
+/* :root{
   --primary-color: white;
   --secondary-color: rgb(61, 68, 73);
   --highlight-color: #3282b8;
+
+  --dt-padding: 12px;
+  --dt-padding-s:6px;
+  --dt-padding-xs: 2px;
+
+  --dt-border-radius: 3px;
+
+
+  --dt-background-color-container: #2a3338;
+  --dt-border-color: var(--secondary-color);
+  --dt-bg-color: var(--highlight-color);
+  --dt-text-color: var(--primary-color);
+  --dt-bg-active-button: var(--highlight-color);
+  --dt-text-color-button: var(--primary-color);
+  --dt-hover-cell-color: var(--highlight-color);
+  --dt-even-row-color: var(--secondary-color);
+  --dt-focus-color: var(--highlight-color);
+  --dt-input-background-color: var(--secondary-color);
+  --dt-input-color: var(--primary-color);
+
+} */
+
+
+
+.datatable-container {
+  font-family: 'Poppins', sans-serif;
+  background-color: #2a3338;
+  border-radius: 3px;
+  color: white;
+  width: 600px;
+  margin: 0 auto;
+  font-size: 12px;
 }
+
+.datatable-container .header-tools{
+  border-bottom: 1px solid #3282b8;
+  padding: 12px;
+  display: flex;
+  align-items: baseline;
+  font-family: 'Poppins', sans-serif;
+}
+
+.datatable-container .header-tools .search{
+  width: 40%;
+}
+
+.datatable-container .header-tools .search .search-input{
+  width: 100%;
+  background-color: rgb(61, 68, 73);
+  display: block;
+  box-sizing: border-box;
+  border-radius: 3px;
+  border: 1px solid rgb(61, 68, 73);
+  color: white;
+  outline: none;
+}
+
+.search-input{
+  height: 30px;
+  padding: 8px;
+  font-size: 15px;
+}
+
+.datatable-container .header-tools .tools{
+  width: 70%;
+  font-family: 'Poppins', sans-serif;
+}
+
+.datatable-container .header-tools .tools ul{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: start;
+  align-items: baseline;
+}
+
+i{
+  cursor: pointer;
+  margin: 5px;
+}
+
+.datatable-container .header-tools .tools ul li{
+  display: inline-block;
+  margin: 0 2px;
+  align-items: baseline;
+}
+
+.datatable-container .header-tools .tools ul li button{
+  color: white;
+  width: 100%;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 3px;
+  background: transparent;
+  cursor: pointer;
+  padding: 6px 12px;
+}
+
+.datatable-container .header-tools .tools ul li button:hover{
+  background: #3282b8;
+}
+
+.datatable-container .datatable{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.datatable-container .datatable,
+.datatable-container .datatable th,
+.datatable-container .datatable td{
+  padding: 12px;
+}
+
+.datatable-container .datatable th{
+  font-weight: bold;
+  text-align: left;
+  border-bottom: 1px solid rgb(61, 68, 73);
+}
+
+.datatable-container .datatable tbody tr:nth-child(even){
+  background-color: rgb(61, 68, 73);
+}
+
+.datatable-container .datatable tbody tr:hover{
+  background-color: #3282b8;
+}
+
+.fa-edit{
+  color: rgb(101, 233, 200);
+  font-size: 18px;
+}
+
+.fa-trash-alt{
+  color: rgb(247, 33, 33);
+  font-size: 18px;
+}
+
+
